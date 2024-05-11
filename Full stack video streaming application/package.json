@@ -1,0 +1,12 @@
+{
+  "name": "full-stack-video-streaming-application",
+  "version": "1.0.0",
+  "description": "[YouTube Video Link](https://youtu.be/Hn0uZwjghng?si=ZlSHzhEli_ZOuztV)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

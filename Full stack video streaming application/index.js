@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 const app = express();
 
 
+
+//multer middleware
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
       cb(null, "./uploads");
@@ -16,6 +18,8 @@ const storage = multer.diskStorage({
     },
 });
 
+// multer configuration
+const upload = multer({storage: storage});
 
 app.use(cors(
     {

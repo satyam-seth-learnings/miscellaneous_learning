@@ -7,6 +7,16 @@ import { v4 as uuidv4 } from "uuid";
 const app = express();
 
 
+app.use(cors(
+    {
+        origin: [
+            "localhost:3000",
+        ],
+        credentials: true,
+    }
+));
+
+
 app.get('/', function(req, res) {
     res.json({message: "Hello Chai aur Code"});
 });

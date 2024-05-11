@@ -17,6 +17,16 @@ app.use(cors(
 ));
 
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*"); // watch it
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
+  
+
 app.get('/', function(req, res) {
     res.json({message: "Hello Chai aur Code"});
 });

@@ -16,7 +16,6 @@ app.use(cors(
     }
 ));
 
-
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*"); // watch it
     res.header(
@@ -25,7 +24,9 @@ app.use((req, res, next) => {
     );
     next();
 });
-  
+
+app.use(express.json())
+
 
 app.get('/', function(req, res) {
     res.json({message: "Hello Chai aur Code"});

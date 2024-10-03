@@ -1,2 +1,5 @@
 # for backend
 Django==5.1.1
+
+# for websocket
+channels==4.1.0

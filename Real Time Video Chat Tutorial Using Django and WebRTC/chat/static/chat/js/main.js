@@ -59,5 +59,21 @@ btnJoin.addEventListener('click', (e) => {
     websocket.addEventListener('error', (e) => {
         console.log('Error Occurred!', e);
     });
+});
 
+const localVideo = document.getElementById("local-video");
+
+let localStream;
+
+const constrains = {
+    'video': true,
+    'audio': true,
+};
+
+const userMedia = navigator.mediaDevices.getUserMedia(constrains).then(stream => {
+    localStream = stream;
+    localVideo.srcObject = localStream;
+    localVideo.muted = true;
+}).catch(error => {
+    console.log('Error accessing media devices.', error);
 });

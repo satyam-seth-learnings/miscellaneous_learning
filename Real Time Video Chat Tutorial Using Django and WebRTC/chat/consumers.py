@@ -11,7 +11,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             self.channel_name,
         )
 
-        self.accept()
+        await self.accept()
 
     async def disconnected(self, close_code):
         await self.channel_layer.group_discard(
@@ -36,4 +36,4 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def send_message(self, event):
         message = event['message']
 
-        await self.send(text_data=json.loads({'message': message}))
+        await self.send(text_data=json.dumps({'message': message}))

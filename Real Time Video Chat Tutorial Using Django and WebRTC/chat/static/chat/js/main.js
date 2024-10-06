@@ -59,7 +59,7 @@ btnJoin.addEventListener('click', (e) => {
     e.target.style.visibility = 'hidden';
 
     // set websocket url
-    const scheme = window.location.protocol === 'https' ? 'wss://' : 'ws://';
+    const scheme = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
     const endpoint = scheme + window.location.host + window.location.pathname;
 
     console.log('endpoint:', endpoint);
